@@ -1,0 +1,127 @@
+#
+# Unreal Engine + Project mono-repo gitignore
+# Engine root = Engine/Engine
+#
+
+# Ignore everything by default, but allow directories
+*
+!*/
+
+# -------------------------
+# Source files (allowed)
+# -------------------------
+!*.c
+!*.cc
+!*.cpp
+!*.cpp.template
+!*.h
+!*.h.template
+!*.hpp
+!*.inl
+!*.inc
+!*.m
+!*.mm
+!*.rc
+!*.rc2
+!*.def
+!*.exp
+!*.manifest
+
+!*.ispc
+!*.isph
+
+!*.java
+!*.java.template
+
+!*.cs
+!*.cs.template
+!*.aspx
+!*.resx
+
+!*.usf
+!*.ush
+!*.hlsl
+!*.glsl
+
+!*.txt
+!*.md
+
+!*.bat
+!*.sh
+!*.pl
+!*.py
+!*.ps1
+!*.js
+!*.ts
+!*.tsx
+!*.command
+
+!*.ini
+!*.json
+!*.xml
+!*.uproject
+!*.uplugin
+!*.html
+!*.css
+!*.config
+!*.yaml
+!*.yml
+
+!*.cmake
+!*.sln
+!*.vcxproj
+!*.vcxproj.filters
+!Dockerfile
+!Makefile
+!.git*
+!.editorconfig
+
+# -------------------------
+# Project ignores
+# -------------------------
+/Intermediate/
+/Saved/
+/DerivedDataCache/
+/Binaries/
+/.vs/
+/.vscode/
+!Content/
+!Content/**
+
+# -------------------------
+# OS + IDE junk
+# -------------------------
+.DS_Store
+[Dd]esktop.ini
+.idea/
+.vs
+.vscode
+
+# Extra Unreal / build junk
+*.pdb
+*.obj
+*.ipdb
+*.iobj
+*.log
+*.tmp
+*.bak
+*.ubt
+*.uat
+*.modules
+*.target
+*.version
+
+# DDC anywhere
+**/DerivedDataCache/
+
+# Plugin build outputs
+**/Plugins/**/Intermediate/
+**/Plugins/**/Binaries/
+**/Plugins/**/DerivedDataCache/
+
+# IDE junk (explicit)
+.vs/
+.vscode/
+.idea/
+.cxx/
+
