@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/Image.h"
 #include "Cpp_WGT_SlottedItem.generated.h"
 
 class UCpp_InventoryItem;
@@ -21,6 +22,7 @@ public:
 	//=================================================================================================================
 	// FUNCTIONS
 	//=================================================================================================================
+	FORCEINLINE void SetImageBrush(const FSlateBrush& Brush) const { IMG_Icon->SetBrush(Brush); }
 	FORCEINLINE UImage* GetImageIcon() const { return IMG_Icon; }
 	
 	FORCEINLINE void SetGridIndex(const int32 Index) { GridIndex = Index; }
@@ -30,6 +32,8 @@ public:
 	
 	FORCEINLINE void SetIsStackable(const bool bStackable) { bIsStackable = bStackable; }
 	
+	void SetInventoryItem(UCpp_InventoryItem* Item);
+	FORCEINLINE UCpp_InventoryItem* GetInventoryItem() const { return InventoryItem.Get(); }
 
 private:
 	//=================================================================================================================
