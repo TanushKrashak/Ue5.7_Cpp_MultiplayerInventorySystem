@@ -51,7 +51,7 @@ protected:
 	FSlotAvailabilityResult HasRoomForItem(const UCpp_InventoryItem* Item);
 	FSlotAvailabilityResult HasRoomForItem(const FCpp_ItemManifest& Item);
 	
-	void AddItemToIndices(const FSlotAvailabilityResult& Result, UCpp_InventoryItem* Item);
+	void AddItemToIndices(const FSlotAvailabilityResult& Result, UCpp_InventoryItem* Item) const;
 	void AddItemToIndex(UCpp_InventoryItem* Item, const int32 Index, const bool bStackable, const int32 StackAmount) const;
 	UCpp_WGT_SlottedItem* CreateSlottedItem(UCpp_InventoryItem* Item, const int32 Index, const bool bStackable, const int32 StackAmount, const FGridItemFragment* GridFrag, const FIconItemFragment* IconFrag) const;
 	

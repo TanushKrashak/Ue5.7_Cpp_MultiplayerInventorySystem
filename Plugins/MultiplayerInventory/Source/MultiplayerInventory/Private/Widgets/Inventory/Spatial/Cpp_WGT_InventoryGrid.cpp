@@ -86,9 +86,9 @@ FSlotAvailabilityResult UCpp_WGT_InventoryGrid::HasRoomForItem(const FCpp_ItemMa
 	return Result;
 }
 
-void UCpp_WGT_InventoryGrid::AddItemToIndices(const FSlotAvailabilityResult& Result, UCpp_InventoryItem* Item) {
-	for (const auto& Slot : Result.AvailableSlots) {
-		AddItemToIndex(Item, Slot.Index, Result.bStackable, Slot.AmountToFill);
+void UCpp_WGT_InventoryGrid::AddItemToIndices(const FSlotAvailabilityResult& Result, UCpp_InventoryItem* Item) const {
+	for (const auto& AvailSlot : Result.AvailableSlots) {
+		AddItemToIndex(Item, AvailSlot.Index, Result.bStackable, AvailSlot.AmountToFill);
 	}
 }
 
